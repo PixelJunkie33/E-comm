@@ -1,0 +1,107 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.container-grid{
+   width: 100vw;
+}
+
+.coll  {
+    height: 250px;
+    width: 250px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.cart {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50px;
+    padding-bottom: 5px;
+    margin-top: -10px;
+    transition: border 0.3s ease; /* Smooth transition */
+}
+
+.cart:hover {
+    border-width: 2px; /* Makes the border bolder on hover */
+}
+
+.top-bar {
+    background: black;
+    width: 100vw;
+    color: lime;
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.hidden {
+    transform: translateY(-100%);
+}
+
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 1rem;
+    overflow-x: auto; /* Allows scrolling if content overflows */
+    max-height: 80vh; /* Limit height if desired for better viewability */
+    width: 95vw;
+}
+
+.product-item {
+    border: 1px solid #f8f8f8;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    height: 250px;
+    border-radius: 5px;
+    transition: border 0.3s ease; /* Smooth transition */
+}
+
+.product-item:hover {
+    border-width: 5px; /* Makes the border bolder on hover */
+}
+
+/* Adjust columns for smaller screens */
+@media (max-width: 768px) {
+    #product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+        margin-bottom: 5px;
+    }
+}
+
+.product-img{
+    height: 50%;
+}
+
+.product-name{
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+li {
+ list-style: none;
+ font-size: 12px;
+ color: gray;
+ gap: 5px;
+}
+
+.footer-tag-title{
+    font-size: 12.5px;
+    font-weight: bolder;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
